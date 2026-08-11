@@ -20,7 +20,9 @@ export default function InsightResults({ insights }: Props) {
       `OPPORTUNITIES\n${insights.opportunities.map(o => `• ${o.text}`).join('\n')}`,
       `KEY QUOTES\n${insights.quotes.map(q => `"${q}"`).join('\n')}`,
     ].join('\n\n');
-    navigator.clipboard.writeText(text);
+    navigator.clipboard?.writeText(text).catch(() => {
+      /* Clipboard API blocked (e.g. embedded iframe without permission) — fail silently. */
+    });
   };
 
   return (
