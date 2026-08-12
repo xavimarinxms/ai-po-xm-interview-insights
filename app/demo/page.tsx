@@ -70,10 +70,10 @@ function DemoPageInner() {
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-6">
           {/* Form */}
           <div className="lg:col-span-2 flex flex-col gap-4">
-            <div className="bg-white rounded-xl border border-gray-200 p-6 flex flex-col gap-4">
+            <div data-tour="input" className="bg-white rounded-xl border border-gray-200 p-6 flex flex-col gap-4">
               <div className="flex items-center justify-between">
                 <h2 className="text-sm font-semibold text-gray-900">Interview transcript</h2>
-                <button onClick={() => setInput(SAMPLE_INPUT)}
+                <button onClick={() => setInput(SAMPLE_INPUT)} data-tour="sample"
                   className="text-xs font-medium text-brand-700 bg-brand-50 hover:bg-brand-100 border border-brand-300 rounded-lg px-3 py-1.5 transition-colors">
                   ✨ Sample data
                 </button>
@@ -101,7 +101,7 @@ function DemoPageInner() {
                 <p className="text-xs text-gray-400 mt-1">{input.transcript.length} chars · ~{Math.ceil(input.transcript.split(' ').length / 130)} min read</p>
               </div>
 
-              <button onClick={analyze} disabled={loading || input.transcript.length < 100}
+              <button onClick={analyze} disabled={loading || input.transcript.length < 100} data-tour="run"
                 className="w-full bg-brand-500 hover:bg-brand-600 text-white text-sm font-semibold rounded-xl py-3 px-6 transition-colors shadow-sm disabled:opacity-40 disabled:cursor-not-allowed flex items-center justify-center gap-2">
                 {loading ? (
                   <><svg className="animate-spin w-4 h-4" fill="none" viewBox="0 0 24 24"><circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"/><path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z"/></svg>Analyzing…</>
@@ -111,7 +111,7 @@ function DemoPageInner() {
           </div>
 
           {/* Results */}
-          <div className="lg:col-span-3">
+          <div className="lg:col-span-3" data-tour="results">
             {error && <div className="bg-red-50 border border-red-200 rounded-xl p-4 text-sm text-red-700 mb-4">{error}</div>}
             {!insights && !loading && (
               <div className="bg-white rounded-xl border border-gray-200 border-dashed p-12 text-center h-48 flex flex-col items-center justify-center">
