@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 const HOW_IT_WORKS = [
   { step: '01', title: 'Paste your transcript', desc: 'Copy your interview transcript from Otter, Notion, or any tool and paste it in. No special format needed.' },
-  { step: '02', title: 'AI extracts the insights', desc: 'Groq (Llama 3.3) reads the transcript and identifies JTBDs, pain points, opportunities, and key quotes.' },
+  { step: '02', title: 'AI extracts the insights', desc: 'Groq (GPT-OSS 120B) reads the transcript and identifies JTBDs, pain points, opportunities, and key quotes.' },
   { step: '03', title: 'Copy and use in your PRD', desc: 'Copy insights as structured text and paste directly into your PRD, Confluence page, or research repository.' },
 ];
 

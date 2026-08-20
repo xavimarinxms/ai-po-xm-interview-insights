@@ -58,7 +58,7 @@ function DemoPageInner() {
       </nav>}
 
       <div className="bg-blue-50 border-b border-blue-100 px-4 py-2.5 text-center text-xs text-blue-700 font-medium">
-        Demo mode — no login required · No transcripts stored · Powered by Groq (Llama 3.3, free tier)
+        Demo mode — no login required · No transcripts stored · Powered by Groq (GPT-OSS 120B, free tier)
       </div>
 
       <main className="flex-1 max-w-5xl mx-auto w-full px-6 py-10">
