@@ -97,7 +97,6 @@ Rules:
     return NextResponse.json(insights);
   } catch (err) {
     console.error(err);
-    const detail = err instanceof Error ? err.message : String(err);
-    return NextResponse.json({ error: 'Analysis failed', detail }, { status: 500 });
+    return NextResponse.json({ error: 'Analysis failed' }, { status: 500 });
   }
 }
